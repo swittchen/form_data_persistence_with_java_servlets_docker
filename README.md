@@ -28,7 +28,7 @@ A demonstration project showcasing form data persistence using Java Servlets, JP
 ├── src/
 │   └── main/
 │       ├── java/
-│       │   └── org/game/
+│       │   └── org/sergei/form
 │       │       ├── entities/
 │       │       │   └── SForm.java            # JPA entity class
 │       │       ├── model/
