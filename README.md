@@ -1,4 +1,4 @@
-# Form Data Persistence with Java Servlets & Docker
+# 📝 Form Data Persistence with Java Servlets & Docker
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
@@ -6,7 +6,7 @@
 
 A demonstration project showcasing form data persistence using Java Servlets, JPA/Hibernate, and Docker Compose with MySQL. This project highlights modern Java web development practices with containerization.
 
-## Key Features
+## 📌 Key Features
 
 - **Modern Java Web Stack**: Jakarta EE Servlets with JPA/Hibernate ORM
 - **Containerized Infrastructure**: Docker Compose for MySQL database
@@ -14,7 +14,7 @@ A demonstration project showcasing form data persistence using Java Servlets, JP
 - **Production-ready Patterns**: Proper separation of concerns with DTOs and Entities
 - **CI/CD Ready**: Maven build configuration
 
-## Technology Stack
+## 🛠️ Technology Stack
 
 - **Backend**: Java 17+, Jakarta EE Servlets, JPA/Hibernate
 - **Database**: MySQL 8.0
@@ -22,7 +22,7 @@ A demonstration project showcasing form data persistence using Java Servlets, JP
 - **Infrastructure**: Docker, Docker Compose
 - **Build Tool**: Maven
 
-## Architecture Overview
+## 📂 Architecture Overview
 ```csharp
 .
 ├── src/
@@ -52,7 +52,7 @@ A demonstration project showcasing form data persistence using Java Servlets, JP
 ```
 
 
-## Getting Started
+## 🚀Getting Started
 
 ### Prerequisites
 - Java 17+
@@ -60,8 +60,33 @@ A demonstration project showcasing form data persistence using Java Servlets, JP
 - Docker Engine 20.10+
 
 ### Installation
-1. Clone the repository:
+#### 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/form-data-persistence-with-java-servlets-docker.git
 cd form-data-persistence-with-java-servlets-docker
+```
+#### 2.  Build the project:
 
+```bash
+mvn clean package
+```
+#### 3. Start the database with Docker Compose:
+
+Make sure, that you have installed Docker!
+
+```bash
+docker-compose up -d
+```
+MySQL will be available on port ``3306``.
+
+#### 4.   Deploy the WAR file to your Tomcat server
+
+ - Copy the generated WAR from target/projectName.war into the webapps folder of your Tomcat.
+ - Start (or restart) the Tomcat server.
+
+#### 5. Open the app in your browser:
+
+```bash
+http://localhost:8080/yourapp/index.html
+```
