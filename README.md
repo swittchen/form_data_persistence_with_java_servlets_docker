@@ -31,7 +31,7 @@ A demonstration project showcasing form data persistence using Java Servlets, JP
 │       │   └── org/sergei/form
 │       │       ├── entities/
 │       │       │   └── SForm.java            # JPA entity class
-│       │       ├── model/
+│       │       ├── dto/
 │       │       │   ├── RequestData.java      # Request DTO
 │       │       │   └── ResponseData.java     # Response DTO
 │       │       └── servlets/
@@ -45,6 +45,8 @@ A demonstration project showcasing form data persistence using Java Servlets, JP
 │           ├── index.html                    # Form page
 │           └── js/
 │               └── script.js                 # Fetch API logic
+│           └── css/
+│               └── style.css                 # Styling
 ├── docker-compose.yml                        # Docker Compose for MySQL
 ├── init.sql                                  # SQL script to create table
 ├── pom.xml                                   # Maven build file
