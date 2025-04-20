@@ -1,0 +1,29 @@
+# Use Docker Compose version 3.8 (compatible with modern Docker)
+version: '3.8'
+
+services:
+  # Define the MySQL database service
+  db:
+    image: mysql:8.0                      # Use the official MySQL 8.0 image
+    container_name: mysql_db             # Set a custom container name
+    restart: always                      # Automatically restart if the container stops
+
+    # Set environment variables for MySQL configuration
+    environment:
+      MYSQL_ROOT_PASSWORD: root          # Root password (should not be used in production)
+      MYSQL_DATABASE: messages           # Name of the default database to be created
+      MYSQL_USER: user                   # Create an additional MySQL user
+      MYSQL_PASSWORD: admin              # Password for the new MySQL user
+
+    ports:
+      - "3306:3306"                      # Expose MySQL port 3306 to the host machine
+
+    volumes:
+      - db_data:/var/lib/mysql           # Persist MySQL data across container restarts
+      - ./db-scripts:/docker-entrypoint-initdb.d
+        # Mount local folder for init SQL scripts:
+      # Any .sql or .sh files in this folder will be executed once at container startup
+
+# Define a named volume to persist MySQL data
+volumes:
+  db_data:
