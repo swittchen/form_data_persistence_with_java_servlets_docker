@@ -26,7 +26,7 @@ import java.util.List;
  *
  * <p>GET: Returns all stored form entries in JSON format.</p>
  */
-@WebServlet("/game")
+@WebServlet("/form")
 public class MainServlet extends HttpServlet {
 
     /** Gson instance for JSON serialization/deserialization. */

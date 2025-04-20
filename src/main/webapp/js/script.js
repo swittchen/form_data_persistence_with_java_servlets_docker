@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dataToSend = Object.fromEntries(formData.entries());
 
         // Send the form data as a JSON POST request to the backend
-        fetch('/game', {
+        fetch('form', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json', // Specify JSON content type
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then((response) => {
             // Handle HTTP errors explicitly
             if (!response.ok) {
+                console.log(response);
                 throw new Error(`Error! Status: ${response.status}`);
             }
             return response.json(); // Parse response as JSON

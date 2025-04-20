@@ -4,7 +4,7 @@
                                  https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
     <persistence-unit name="messages-persistence-unit">
-        <class>org.game.entities.SForm</class>
+        <class>org.sergei.form.entities.SForm</class>
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://0.0.0.0:3306/messages"/>
             <property name="jakarta.persistence.jdbc.user" value="user"/>
