@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Meta information for proper rendering and touch zooming on mobile devices.
+        Sets character encoding to UTF-8.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title displayed in the browser tab -->
+    <title>Test Post with Fetch Request</title>
+
+    <!-- Link to external stylesheet (optional) -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<!--
+    Main container for the contact form.
+    Form collects username, email and a message from the user.
+-->
+<div class="form-container">
+    <h1>Contact Us</h1>
+
+    <!--
+        Contact form with POST functionality handled via JavaScript Fetch API.
+        Form includes three fields: username, email, and message.
+    -->
+    <form id="messageForm">
+        <!-- User’s name input -->
+        <label for="username">Name</label>
+        <input type="text" id="username" name="username" placeholder="Your Name" required>
+
+        <!-- User’s email address input -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <!-- Message textarea -->
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Type your message here" required></textarea>
+
+        <!-- Submit button -->
+        <button type="submit">Send</button>
+    </form>
+
+    <!--
+        Output div to display the response returned by the server
+        (status message, success/failure).
+    -->
+    <div id="output" class="output"></div>
+</div>
+
+<!--
+    JavaScript file responsible for:
+    - capturing form submission
+    - sending the POST request via Fetch API
+    - handling the server response
+-->
+<script src="./js/script.js"></script>
+
+</body>
+</html>
