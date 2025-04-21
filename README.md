@@ -24,33 +24,42 @@ A demonstration project showcasing form data persistence using Java Servlets, JP
 
 ## 📂 Architecture Overview
 ```csharp
-.
+form_data_persistence_with_java_servlets_docker/
+├── .smarttomcat/
+├── db-scripts/
+├── docker-compose.yml
+├── LICENSE
+├── pom.xml
+├── README.md
+├── .gitignore
+├── target/
+│
 ├── src/
-│   └── main/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── org/
+│   │   │       └── sergei/
+│   │   │           └── form/
+│   │   │               ├── entities/
+│   │   │               └── servlets/
+│   │   │                   └── MainServlet.java
+│   │   ├── resources/
+│   │   └── webapp/
+│   │       └── ... (HTML, CSS, JS)
+│
+│   └── test/
 │       ├── java/
-│       │   └── org/sergei/form
-│       │       ├── entities/
-│       │       │   └── SForm.java            # JPA entity class
-│       │       ├── dto/
-│       │       │   ├── RequestData.java      # Request DTO
-│       │       │   └── ResponseData.java     # Response DTO
-│       │       └── servlets/
-│       │           └── MainServlet.java      # Main servlet
-│       ├── resources/
-│       │   └── META-INF/
-│       │       └── persistence.xml           # JPA configuration
-│       └── webapp/
-│           ├── WEB-INF/
-│           │   └── web.xml                   # Servlet settings
-│           ├── index.html                    # Form page
-│           └── js/
-│               └── script.js                 # Fetch API logic
-│           └── css/
-│               └── style.css                 # Styling
-├── docker-compose.yml                        # Docker Compose for MySQL
-├── init.sql                                  # SQL script to create table
-├── pom.xml                                   # Maven build file
-└── README.md                                 # This file
+│       │   └── org/
+│       │       └── sergei/
+│       │           └── form/
+│       │               ├── entities/
+│       │               │   └── SFormPersistenceTest.java
+│       │               └── servlets/
+│       │                   └── MainServletTest.java
+│       └── resources/
+│           └── META-INF/
+│               └── persistence.xml
+
 ```
 
 
