@@ -1,0 +1,9 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0">
+    <persistence-unit name="messages-persistence-unit-test">
+        <class>org.sergei.form.entities.SForm</class>
+        <properties>
+            <!-- the rest parameter are in test code, test containers -->
+        </properties>
+    </persistence-unit>
+</persistence>
